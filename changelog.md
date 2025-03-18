@@ -65,7 +65,7 @@
 
   ```shell
   curl \
-    "http://localhost:8000/v1/models/gemini-pro:generateContent?key=$YOUR_GEMINI_API_KEY" \
+    "http://localhost:3040/v1/models/gemini-pro:generateContent?key=$YOUR_GEMINI_API_KEY" \
   --header 'Content-Type: application/json' \
   --data '{"contents":[{"parts":[{"text":"Hello"}]}]}'
   ```
@@ -76,7 +76,7 @@
   > <https://ai.google.dev/docs/api_versions>
 
   ```shell
-  curl http://localhost:8000/v1/chat/completions \
+  curl http://localhost:3040/v1/chat/completions \
     -H "Authorization: Bearer $YOUR_GEMINI_API_KEY#useBeta" \
     -H "Content-Type: application/json" \
     -d '{

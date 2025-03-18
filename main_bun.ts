@@ -1,9 +1,9 @@
 import { app } from "./src/app.ts"
 
-console.log("Listening on http://localhost:8000/")
+console.log("Listening on http://localhost:3040/")
 
 // @ts-ignore supress warning
 Bun.serve({
-  port: 8000,
+  port: 3040,
   fetch: app.fetch,
 })

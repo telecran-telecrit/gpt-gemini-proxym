@@ -1,4 +1,4 @@
-// node_modules/.deno/@hono+node-server@1.13.8/node_modules/@hono/node-server/dist/index.mjs
+// node_modules/@hono/node-server/dist/index.mjs
 import { createServer as createServerHTTP } from "http";
 import { Http2ServerRequest } from "http2";
 import { Readable } from "stream";
@@ -456,7 +456,7 @@ var serve = (options, listeningListener) => {
   return server;
 };
 
-// node_modules/.deno/itty-router@5.0.18/node_modules/itty-router/Router.mjs
+// node_modules/itty-router/Router.mjs
 var r = ({ base: r2 = "", routes: e2 = [], ...a } = {}) => ({ __proto__: new Proxy({}, { get: (a2, t, o, c) => (a3, ...l) => e2.push([t.toUpperCase?.(), RegExp(`^${(c = (r2 + a3).replace(/\/+(\/|$)/g, "$1")).replace(/(\/?\.?):(\w+)\+/g, "($1(?<$2>*))").replace(/(\/?\.?):(\w+)/g, "($1(?<$2>[^$1/]+?))").replace(/\./g, "\\.").replace(/(\/?)\*/g, "($1.*)?")}/*$`), l, c]) && o }), routes: e2, ...a, async fetch(r3, ...t) {
   let o, c, l = new URL(r3.url), p = r3.query = { __proto__: null };
   for (let [r4, e3] of l.searchParams) p[r4] = p[r4] ? [].concat(p[r4], e3) : e3;
@@ -479,7 +479,7 @@ var r = ({ base: r2 = "", routes: e2 = [], ...a } = {}) => ({ __proto__: new Pro
   return o;
 } });
 
-// node_modules/.deno/itty-router@5.0.18/node_modules/itty-router/cors.mjs
+// node_modules/itty-router/cors.mjs
 var e = (e2 = {}) => {
   const { origin: o = "*", credentials: s = false, allowMethods: c = "*", allowHeaders: r2, exposeHeaders: n, maxAge: t } = e2, a = (e3) => {
     const c2 = e3?.headers.get("origin");
@@ -710,7 +710,7 @@ var Logger = class {
   }
 };
 
-// node_modules/.deno/eventsource-parser@3.0.0/node_modules/eventsource-parser/dist/index.js
+// node_modules/eventsource-parser/dist/index.js
 var __defProp = Object.defineProperty;
 var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
 var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key != "symbol" ? key + "" : key, value);
@@ -806,7 +806,7 @@ function splitLines(chunk) {
   return [lines, incompleteLine];
 }
 
-// node_modules/.deno/eventsource-parser@3.0.0/node_modules/eventsource-parser/dist/stream.js
+// node_modules/eventsource-parser/dist/stream.js
 var EventSourceParserStream = class extends TransformStream {
   constructor({ onError, onRetry, onComment } = {}) {
     let parser;
@@ -1249,8 +1249,8 @@ app.post("/:model_version/models/:model_and_action", geminiProxy);
 app.all("*", () => new Response("Page Not Found", { status: 404 }));
 
 // main_node.ts
-console.log("Listening on http://localhost:8000/");
+console.log("Listening on http://localhost:3040/");
 serve({
   fetch: app.fetch,
-  port: 8e3
+  port: 3040
 });

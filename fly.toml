@@ -5,7 +5,7 @@ primary_region = 'lax'
 dockerfile = 'docker/bun.Dockerfile'
 
 [http_service]
-internal_port = 8000
+internal_port = 3040
 force_https = true
 auto_stop_machines = "suspend"
 auto_start_machines = true

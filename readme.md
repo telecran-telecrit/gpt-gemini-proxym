@@ -18,7 +18,7 @@ complex development work.
 <summary>✅ Gemini Pro</summary>
 
 ```shell
-curl -s http://localhost:8000/v1/chat/completions \
+curl -s http://localhost:3040/v1/chat/completions \
   -H "Authorization: Bearer $YOUR_GEMINI_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -37,7 +37,7 @@ curl -s http://localhost:8000/v1/chat/completions \
 <summary>✅ Gemini Pro Vision</summary>
 
 ```shell
-curl -s http://localhost:8000/v1/chat/completions \
+curl -s http://localhost:3040/v1/chat/completions \
   -H "Authorization: Bearer $YOUR_GEMINI_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -138,11 +138,11 @@ bun run start:bun
 ### docker
 
 ```shell
-docker run -d -p 8000:8000 ghcr.io/zuisong/gemini-openai-proxy:deno
+docker run -d -p 3040:3040 ghcr.io/zuisong/gemini-openai-proxy:deno
 ## or
-docker run -d -p 8000:8000 ghcr.io/zuisong/gemini-openai-proxy:bun
+docker run -d -p 3040:3040 ghcr.io/zuisong/gemini-openai-proxy:bun
 ## or
-docker run -d -p 8000:8000 ghcr.io/zuisong/gemini-openai-proxy:node
+docker run -d -p 3040:3040 ghcr.io/zuisong/gemini-openai-proxy:node
 ```
 
 ## Star History
